@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block scripts %}
+    <script src="{% static 'quizzes/quiz.js' %}" defer></script>
+{% endblock scripts %}
+
+{% block title %}
+{{obj.name}}
+{% endblock title %}
+
+{% block content %}
+{{obj.name}} 
+<hr>
+<!-- <input type="file" id="image_input" accept="image/png, image/jpg">
+<div id="display_image"></div> -->
+
+<!-- <img src="/static/img/quizhairtypes.png" alt="figure 1"
+class="hairTypes"> -->
+
+
+<form id="quiz-form" class="mt-3 mb-3">
+    {% csrf_token %}
+    <img src="/static/img/quizhairtypes.png" alt="hairtypes" class="hairTypes">
+    <div id="quiz-box"></div>
+    <button type="submit" class="btn btn-primary mt-3">save</button>
+</form>
+
+<div id="result-box"></div>
+<!--<div id="empty-box"></div> -->
+<div id="1a.member1"></div>
+<div id="1a.member2"></div>
+<div id="1a.member3"></div>
+<div id="2a.member1"></div>
+<div id="2a.member2"></div>
+<div id="2a.member3"></div>
+<div id="3a.member1"></div>
+<div id="3a.member2"></div>
+<div id="3a.member3"></div>
+<div id="4a.member1"></div>
+<div id="4a.member2"></div>
+<div id="4a.member3"></div>
+<div id="1b.member1"></div>
+<div id="1b.member2"></div>
+<div id="1b.member3"></div>
+<div id="2b.member1"></div>
+<div id="2b.member2"></div>
+<div id="2b.member3"></div>
+<div id="3b.member1"></div>
+<div id="3b.member2"></div>
+<div id="3b.member3"></div>
+<div id="4b.member1"></div>
+<div id="4b.member2"></div>
+<div id="4b.member3"></div>
+<div id="1c.member1"></div>
+<div id="1c.member2"></div>
+<div id="1c.member3"></div>
+<div id="2c.member1"></div>
+<div id="2c.member2"></div>
+<div id="2c.member3"></div>
+<div id="3c.member1"></div>
+<div id="3c.member2"></div>
+<div id="3c.member3"></div>
+<div id="4c.member1"></div>
+<div id="4c.member2"></div>
+<div id="4c.member3"></div>
+{% endblock content %}
