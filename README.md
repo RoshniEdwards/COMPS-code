@@ -1,5 +1,5 @@
 # Code Architecture
-Django is set up in a way where you can create files called "apps" within your overall application. These apps are in charge of different components of your web application. The main apps I created for my quiz application were questions, quizzes, and results. 
+Django is set up in a way where you can create files called "apps" within your overall application. These apps are in charge of different components of your web application. The main apps I created for my quiz application were questions, quizzes, and results. Here I will explain the function of each of the important files for each app and provide their code.
 
 Each app includes some main python file components within the app:
 - **models.py** file where the databases, base structure and configuration of your app is built using python. (You use the admin panel to control the inputs for each model in a more clean interface.)
