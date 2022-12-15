@@ -20,13 +20,20 @@ To execute my code and run my web application you would need these things to sta
 Type ls in terminal to list all the content in the folder and check if all files are present.
 ## 3. Set Up Virtual Environment for Project
 To remove old environment use `pipenv --rm` command in terminal. 
-
-Then install Pipenv dependencies on your python version with `pipenv install --python 3.10`
-## 4. Create a Database
+Remove any prior pipfiles with `rm Pipfile*`.
+Install Pipenv dependencies on your version of Python with `pipenv install --python 3.10`.
+Then, run `pipenv install requests` to install all packages of Pipfile.
+Then activate virtual env `pipenv shell`.
+If you used Venv to create virtual env, run dependencies with `pip install -r requirements.txt`.
+To list installed dependencies use `pip freeze > requiremenrs.txt`.
+I used sqlite built in to Django, so no need to install outside database
 ## 5. Generate a Secret Key
+Have to create new secret key, since the old one is hidden. `SECRET_KEY = 'whatever-blah-blah-blah`
 ## 6. Migrate Project to the Database
+In terminal use `python manage.py makemigrations Untangled`
+Then, `python manage.py migrate`
 ## 7. Run the Project
-
+Type `python manage.py runserver`in terminal and view project.
 
 
 
